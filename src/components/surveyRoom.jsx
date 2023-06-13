@@ -103,9 +103,9 @@ function SurveyRoom() {
                         <button onClick={() => handleBtn(index)}
                                 className={`${index + 1 === ans[`answer ${qNo}`] ? "bg-blue-800 text-white" : "bg-white"} 
                                 border-2 border-black text-3xl m-1 
-                                rounded-full h-20 w-20 bg-white hover:bg-blue-500 hover:text-white`}
+                                rounded-full h-20 w-20 hover:bg-blue-500 hover:text-white`}
                                 key={index}>
-                            {index + 1}
+                            {index + 1}{console.log(index, ans[`answer ${qNo}`])}
                         </button>)) : (
                     <><textarea
                         className="h-32 w-3/4 border-2 border-black p-2"
