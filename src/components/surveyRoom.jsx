@@ -28,7 +28,7 @@ function SurveyRoom() {
     useEffect(() => {
         if (qNo === questions.length - 1) {           //to set completed key to true and call closing component
             submit && (setAns((ans) => {
-                console.log(1)
+
                 let temp = {...ans, [`completed`]: 'true'}
                 localStorage.setItem(`session ${customerNo}`, JSON.stringify(temp))
                 return temp;
@@ -50,7 +50,7 @@ function SurveyRoom() {
             setQNo((qNo + 1))
         else {
             setAns((ans) => {
-                console.log(1)
+
                 let temp = {...ans, [`answer ${qNo}`]: text}
                 localStorage.setItem(`session ${customerNo}`, JSON.stringify(temp))
                 return temp;
@@ -73,7 +73,6 @@ function SurveyRoom() {
             setQNo((qNo + 1))
         else {
             setAns((ans) => {
-                console.log(1)
                 let temp = {...ans, [`answer ${qNo}`]: null}
                 localStorage.setItem(`session ${customerNo}`, JSON.stringify(temp))
                 return temp;
@@ -105,7 +104,7 @@ function SurveyRoom() {
                                 border-2 border-black text-3xl m-1 
                                 rounded-full h-20 w-20 hover:bg-blue-500 hover:text-white`}
                                 key={index}>
-                            {index + 1}{console.log(index, ans[`answer ${qNo}`])}
+                            {index + 1}
                         </button>)) : (
                     <><textarea
                         className="h-32 w-3/4 border-2 border-black p-2"
